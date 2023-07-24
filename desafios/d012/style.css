@@ -3,14 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root {
-    --fonte-titulo: 'Passion One';
-    --fonte-destaque: 'Sriracha';
-    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif
+    --fonte-titulo: 'Passion One', cursive;
+    --fonte-destaque: 'Sriracha', cursive;
+    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    min-height: 100vh;
 }
 
 header {
@@ -24,35 +28,56 @@ header {
 
 header h1 {
     font-family: var(--fonte-titulo);
-    font-size: 8vw;
-    font-weight: bold
+    font-size: 10vw;
+    font-variant: small-caps;
+    padding-top: 50px;
 }
 
 header p {
     font-family: var(--fonte-padrao);
-    margin-bottom: 10px;
+    padding-bottom: 50px;
 }
 
 a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-main {
+section {
     font-family: var(--fonte-destaque);
-    font-size: 3vw;
+    font-size: 3.5vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     padding-left: 30px;
-}
-
-main p {
-    margin-bottom: 90px;
     line-height: 2em;
 }
+
+section > p {
+    padding-bottom: 10vh;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: black;
+    color: white;
+    margin-left: -30px;
+}
+
+section.imagem > p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.521);
+    padding: 5px;
+}
+
 
 #q1 #q2 {
     box-shadow: inset 1px 1px 10px 5px rgba(0, 0, 0, 0.562);
@@ -61,20 +86,17 @@ main p {
 section#q1 {
     background: black url('imagens/background001.jpg') center center no-repeat fixed; 
     background-size: fixed;
-    margin-left: -30px;
+    
     margin-bottom: 90px;
 }
 
 section#q2 {
     background: black url('imagens/background002.jpg') center center no-repeat fixed;
     background-size: cover;
-    margin-left: -30px;
     margin-bottom: 90px;
 }
 
 .imagem > p {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.404);
     color: white;
     padding: 5px;
     margin: 70px 30px;
@@ -85,9 +107,6 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    margin-top: 150px;
-}
-
-footer p {
     padding: 10px;
+    margin-top: 150px;
 }
